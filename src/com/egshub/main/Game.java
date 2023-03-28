@@ -15,7 +15,6 @@ import javax.swing.JFrame;
 
 import com.egshub.entities.Entity;
 import com.egshub.entities.Player;
-import com.egshub.graphics.Spritesheet;
 
 public class Game extends Canvas implements Runnable, KeyListener {
 
@@ -31,7 +30,6 @@ public class Game extends Canvas implements Runnable, KeyListener {
     private Thread thread;
 
     public List<Entity> entitiesList;
-    public Spritesheet entitiesSprite;
     
     private Player player;
 
@@ -42,8 +40,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
         image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
 
         entitiesList = new ArrayList<Entity>();
-        entitiesSprite = new Spritesheet("/entities.png");
-        player = new Player(0, 0, 16, 16, entitiesSprite.getSprite(0, 0, 16, 16));
+        player = new Player(0, 0, 16, 16);
        
         entitiesList.add(player);
     }

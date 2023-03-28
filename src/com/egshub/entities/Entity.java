@@ -3,12 +3,16 @@ package com.egshub.entities;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.egshub.graphics.Spritesheet;
+
 public class Entity {
     
 	private double x, y;
     private int width, height;
     private BufferedImage sprite;
 
+    protected Spritesheet entitiesSprite = new Spritesheet("/entities.png");
+    
     public Entity(double x, double y, int width, int height, BufferedImage sprite) {
         this.x = x;
         this.y = y;
